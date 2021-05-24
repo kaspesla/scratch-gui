@@ -37,25 +37,15 @@ const ConnectedStep = props => (
                 className={styles.bottomAreaItem}
                 total={3}
             />
-            <div className={classNames(styles.bottomAreaItem, styles.cornerButtons)}>
-                <button
-                    className={classNames(styles.redButton, styles.connectionButton)}
-                    onClick={props.onDisconnect}
-                >
-                    <FormattedMessage
-                        defaultMessage="Disconnect"
-                        description="Button to disconnect the device"
-                        id="gui.connection.disconnect"
-                    />
-                </button>
+            <div className={classNames(styles.bottomAreaItem, styles.buttonRow)}>
                 <button
                     className={styles.connectionButton}
                     onClick={props.onCancel}
                 >
                     <FormattedMessage
-                        defaultMessage="Go to Editor"
+                        defaultMessage="Continue"
                         description="Button to return to the editor"
-                        id="gui.connection.go-to-editor"
+                        id="gui.connection.go-to-editor2"
                     />
                 </button>
             </div>

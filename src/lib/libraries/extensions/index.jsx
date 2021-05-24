@@ -47,6 +47,36 @@ import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 export default [
+{
+      name: 'LEGO MINDSTORMS EV3',
+      extensionId: 'ev3',
+      collaborator: 'LEGO',
+      iconURL: ev3IconURL,
+      insetIconURL: ev3InsetIconURL,
+      description: (
+          <FormattedMessage
+              defaultMessage="Build interactive robots and more."
+              description="Description for the 'LEGO MINDSTORMS EV3' extension"
+              id="gui.extension.ev3.description"
+          />
+      ),
+      featured: true,
+      disabled: false,
+      bluetoothRequired: true,
+      internetConnectionRequired: true,
+      launchPeripheralConnectionFlow: true,
+      useAutoScan: true,
+      connectionIconURL: ev3ConnectionIconURL,
+      connectionSmallIconURL: ev3ConnectionSmallIconURL,
+      connectingMessage: (
+          <FormattedMessage
+              defaultMessage="Connecting. Please wait..."
+              description="Message to help people connect to their EV3. Must note the PIN should be 1234."
+              id="gui.extension.ev3.connectingMessage2"
+          />
+      ),
+      helpLink: 'https://scratch.mit.edu/ev3'
+  },
     {
         name: (
             <FormattedMessage
@@ -196,36 +226,7 @@ export default [
         ),
         helpLink: 'https://scratch.mit.edu/microbit'
     },
-    {
-        name: 'LEGO MINDSTORMS EV3',
-        extensionId: 'ev3',
-        collaborator: 'LEGO',
-        iconURL: ev3IconURL,
-        insetIconURL: ev3InsetIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Build interactive robots and more."
-                description="Description for the 'LEGO MINDSTORMS EV3' extension"
-                id="gui.extension.ev3.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        bluetoothRequired: true,
-        internetConnectionRequired: true,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: false,
-        connectionIconURL: ev3ConnectionIconURL,
-        connectionSmallIconURL: ev3ConnectionSmallIconURL,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting. Make sure the pin on your EV3 is set to 1234."
-                description="Message to help people connect to their EV3. Must note the PIN should be 1234."
-                id="gui.extension.ev3.connectingMessage"
-            />
-        ),
-        helpLink: 'https://scratch.mit.edu/ev3'
-    },
+  
     {
         name: 'LEGO BOOST',
         extensionId: 'boost',

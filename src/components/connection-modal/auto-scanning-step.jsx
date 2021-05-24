@@ -66,16 +66,16 @@ const AutoScanningStep = props => (
             <Box className={classNames(styles.bottomAreaItem, styles.instructions)}>
                 {props.phase === PHASES.prescan && (
                     <FormattedMessage
-                        defaultMessage="Have your device nearby, then begin searching."
+                        defaultMessage="Have your device nearby, then press Search."
                         description="Prompt for beginning the search"
-                        id="gui.connection.auto-scanning.prescan"
+                        id="gui.connection.auto-scanning.prescan2"
                     />
                 )}
                 {props.phase === PHASES.pressbutton && (
                     <FormattedMessage
-                        defaultMessage="Press the button on your device."
+                        defaultMessage="Searching..."
                         description="Prompt for pushing the button on the device"
-                        id="gui.connection.auto-scanning.pressbutton"
+                        id="gui.connection.auto-scanning.pressbutton2"
                     />
                 )}
             </Box>
@@ -91,9 +91,9 @@ const AutoScanningStep = props => (
                         onClick={props.onStartScan}
                     >
                         <FormattedMessage
-                            defaultMessage="Start Searching"
+                            defaultMessage="Search"
                             description="Button in prompt for starting a search"
-                            id="gui.connection.auto-scanning.start-search"
+                            id="gui.connection.auto-scanning.start-search2"
                         />
                     </button>
                 )}
