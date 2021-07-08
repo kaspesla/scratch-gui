@@ -19,6 +19,13 @@ import translateInsetIconURL from './translate/translate-small.png';
 import makeymakeyIconURL from './makeymakey/makeymakey.png';
 import makeymakeyInsetIconURL from './makeymakey/makeymakey-small.svg';
 
+import posenetIconURL from './posenet2scratch/posenet2scratch.png';
+import posenetInsetIconURL from './posenet2scratch/posenet2scratch-small.png';
+
+import spotIconURL from './spot/spot.png';
+import spotInsetIconURL from './spot/spot-small.svg';
+
+
 import microbitIconURL from './microbit/microbit.png';
 import microbitInsetIconURL from './microbit/microbit-small.svg';
 import microbitConnectionIconURL from './microbit/microbit-illustration.svg';
@@ -197,6 +204,37 @@ export default [
         featured: true
     },
     {
+        name: 'PoseNet',
+        extensionId: 'posenet2scratch',
+        collaborator: 'champierre',
+        iconURL: posenetIconURL,
+        insetIconURL: posenetInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Use body and face pose to control Scratch."
+                description=""
+                id="gui.extension.posenet.description"
+            />
+        ),
+        featured: true
+    },
+    {
+           name: 'Spot Control',
+           extensionId: 'spot',
+           collaborator: 'Code & Circuit',
+           iconURL: spotIconURL,
+           insetIconURL: spotInsetIconURL,
+           description: (
+               <FormattedMessage
+                   defaultMessage="Let's control Spot with Scratch!"
+                   description="Let's control Spot with Scratch!"
+                   id="gui.extension.spotextension.description"
+               />
+           ),
+           featured: true
+       },
+       /*
+    {
         name: 'micro:bit',
         extensionId: 'microbit',
         collaborator: 'micro:bit',
@@ -318,5 +356,5 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
-    }
+    }*/
 ];
