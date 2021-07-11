@@ -19,6 +19,9 @@ import translateInsetIconURL from './translate/translate-small.png';
 import makeymakeyIconURL from './makeymakey/makeymakey.png';
 import makeymakeyInsetIconURL from './makeymakey/makeymakey-small.svg';
 
+import hueIconURL from './hue/hue.png';
+import hueInsetIconURL from './hue/hue-small.png';
+
 import posenetIconURL from './posenet2scratch/posenet2scratch.png';
 import posenetInsetIconURL from './posenet2scratch/posenet2scratch-small.png';
 
@@ -183,6 +186,22 @@ export default [
                 defaultMessage="Translate text into many languages."
                 description="Description for the Translate extension"
                 id="gui.extension.translate.description"
+            />
+        ),
+        featured: true,
+        internetConnectionRequired: true
+    },
+    {
+        name: 'Hue Lights',
+        extensionId: 'hue',
+        collaborator: 'Code & Circuit',
+        iconURL: hueIconURL,
+        insetIconURL: hueInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Control Hue Lights."
+                description="Control Hue Lights"
+                id="gui.extension.huelights.description"
             />
         ),
         featured: true,
