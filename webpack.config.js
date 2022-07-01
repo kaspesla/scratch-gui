@@ -12,12 +12,31 @@ var autoprefixer = require('autoprefixer');
 var postcssVars = require('postcss-simple-vars');
 var postcssImport = require('postcss-import');
 
+
+
 const STATIC_PATH = process.env.STATIC_PATH || '/static';
 
 const base = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     devtool: 'cheap-module-source-map',
     devServer: {
+	    before:  function(app)
+	    {
+	     //  endpoint to convert cookie into permanent cookie
+              app.get("/setCookie", function(req, res) {
+		 let rx = /([^;=\s]*)=([^;]*)/g;
+  let obj = { };
+  for ( let m ; m = rx.exec(req.headers.cookie) ; )
+    obj[ m[1] ] = decodeURIComponent( m[2] );
+		let cook = obj.savedDevice;
+		if (cook)
+		{
+	          var expiryDate = new Date(Number(new Date()) + 315360000000); 
+		  res.cookie("savedDevice", cook, { expires: expiryDate, httpOnly: true });
+		}
+		res.send("foobar");
+	    });
+	},
         contentBase: path.resolve(__dirname, 'build'),
         host: '0.0.0.0',
         port: process.env.PORT || 8601
