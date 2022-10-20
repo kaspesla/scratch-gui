@@ -28,6 +28,8 @@ import posenetInsetIconURL from './posenet2scratch/posenet2scratch-small.png';
 import spotIconURL from './spot/spot.png';
 import spotInsetIconURL from './spot/spot-small.svg';
 
+import gamepadIconURL from './gamepad/gamepad.png';
+import gamepadInsetIconURL from './gamepad/gamepad-small.png';
 
 import microbitIconURL from './microbit/microbit.png';
 import microbitInsetIconURL from './microbit/microbit-small.svg';
@@ -237,6 +239,21 @@ export default [
         ),
         featured: true
     },
+    {
+           name: 'Gamepad',
+           extensionId: 'gamepad',
+           collaborator: 'Code & Circuit',
+           iconURL: gamepadIconURL,
+           insetIconURL: gamepadInsetIconURL,
+           description: (
+               <FormattedMessage
+                   defaultMessage="Gamepad Control"
+                   description="Use a wireless  gamepad with Scratch!"
+                   id="gui.extension.gamepadextension.description"
+               />
+           ),
+           featured: true
+       },
     {
            name: 'Spot Control',
            extensionId: 'spot',
