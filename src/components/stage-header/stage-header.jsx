@@ -148,8 +148,13 @@ const StageHeaderComponent = function (props) {
             );
         header = (
             <Box className={styles.stageHeaderWrapper}>
-                <Box className={styles.stageMenuWrapper}>
+                <Box className={styles.stageMenuWrapper} style={{position: "relative"}}>
                     <Controls vm={vm} />
+                    <input type="text" 
+                    className={styles.spotName}
+                    id="spot-name"
+                    placeholder='your name'
+                    ></input>
                     <div className={styles.stageSizeRow}>
                         {stageControls}
                         <div>

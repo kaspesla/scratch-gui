@@ -2,6 +2,29 @@
 @import "../../css/colors.css";
 @import "../../css/z-index.css";
 
+
+.spot-name {
+    display: none;
+    width: 100px;
+    height: 100%;
+    position: relative; 
+    border: 1px solid hsla(0, 0%, 0%, 0.15);
+    border-radius: calc(0.5rem / 2);
+    color: hsla(0, 0%, 0%, 0.5);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+
+.spot-name::placeholder {
+    color: hsla(0, 0%, 0%, 0.2);
+}
+
+.spot-name:focus {
+    outline: none;
+}
+
 .stage-header-wrapper {
     position: relative;
 }
