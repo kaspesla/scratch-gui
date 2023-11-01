@@ -22,6 +22,9 @@ import makeymakeyInsetIconURL from './makeymakey/makeymakey-small.svg';
 import hueIconURL from './hue/hue.png';
 import hueInsetIconURL from './hue/hue-small.png';
 
+import smiirlIconURL from './smiirl/smiirl_big.png';
+import smiirlInsetIconURL from './smiirl/smiirl_small.png';
+
 import posenetIconURL from './posenet2scratch/posenet2scratch.png';
 import posenetInsetIconURL from './posenet2scratch/posenet2scratch-small.png';
 
@@ -188,6 +191,22 @@ export default [
                 defaultMessage="Translate text into many languages."
                 description="Description for the Translate extension"
                 id="gui.extension.translate.description"
+            />
+        ),
+        featured: true,
+        internetConnectionRequired: true
+    },
+    {
+        name: 'Smiirl Counter',
+        extensionId: 'smiirl',
+        collaborator: 'Code & Circuit',
+        iconURL: smiirlIconURL,
+        insetIconURL: smiirlInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Control Smiirl Counter"
+                description="Control Smiirl Counter"
+                id="gui.extension.smiirl.description"
             />
         ),
         featured: true,
